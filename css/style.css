@@ -1,0 +1,23 @@
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+thead {
+	font-weight: bold;
+	background-color: : lightblue;
+}
+
+table {
+  display:table;
+  width: 80%;
+ 
+  position: fixed;
+}
+
+table thead:first-child tr { background-color: lightblue;}
+
+#nouvelle, #bannir {
+	display: none;
+}

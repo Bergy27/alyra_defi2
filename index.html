@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+ 		<title>Défi 2 : Bastien Berger</title>
+ 		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+
+	<body onload="init()">
+
+ 		<h1>Défi 2 : Place de marché d'illustrateurs indépendants</h1>
+
+ 		</br>
+
+ 		<div id="status"></div>
+ 		</br>
+
+ 		<form action="#" onsubmit="inscription();return false" id="inscription">
+ 			<label for="name">Nom :</label>
+ 			<input type="text" id="name" name="name" required>
+ 			<input type="submit" form="inscription" value="S'inscrire" id="submit_inscription">
+ 			<div id="attente_inscription"></div>
+ 		</form>
+
+ 		</br>
+ 		<form action="#" onsubmit="bannir();return false" id="bannir">
+ 			<label for="add_banni">Adresse à bannir :</label>
+ 			<input type="text" id="add_banni" name="add_banni" required>
+ 			<input type="submit" form="bannir" value="Bannir!" id="submit_bannir">
+ 			<div id="attente_banni"></div>
+ 		</form>
+
+ 		</br>
+ 		 <form action="#" onsubmit="ajouterDemande();return false" id="nouvelle">
+ 			<label for="description">Description :</label>
+ 			<input type="textarea" id="description" name="description" required>
+ 			</br>
+ 			<label for="delai">Délai :</label>
+ 			<input type="number" id="delai" name="delai" required>
+ 			</br>
+ 			<label for="remuneration">Rémunération :</label>
+ 			<input type="number" id="remuneration" name="remuneration" required>
+ 			</br>
+ 			<label for="reputation">Réputation minimum :</label>
+ 			<input type="number" id="reputation" name="reputation" required>
+ 			</br>
+ 			<input type="submit" form="nouvelle" value="Ajouter une demande" id="submit_demande">
+ 			<div id="attente_demande"></div>
+ 		</form>
+
+
+ 		</br>
+ 		</br>
+ 		<div id="postulation_en_cours"></div>
+ 		<table id="demandes">
+ 			<thead>
+ 				<tr>
+ 					<td>Description</td>
+ 					<td>Réputation minimale</td>
+ 					<td>Rémunération</td>
+ 					<td>Délai</td>
+ 					<td>État</td>
+ 					<td>Candidats</td>
+ 					<td>Illustrateur</td>
+ 				</tr>
+ 			</thead>
+ 			<tbody id="count_demandes">
+ 			</tbody>
+ 			
+ 		</table>
+
+
+ 		<script src="https://cdn.ethers.io/scripts/ethers-v4.min.js"
+			charset="utf-8"
+			type="text/javascript">
+		</script>
+		<script src="js/application.js"
+			charset="utf-8"
+			type="text/javascript">
+		</script>		
+		<script src="js/events.js"
+			charset="utf-8"
+			type="text/javascript">
+		</script>
+		<script src="js/status.js"
+			charset="utf-8"
+			type="text/javascript">
+		</script>
+		<script src="js/demandes.js"
+			charset="utf-8"
+			type="text/javascript">
+		</script>
+
+
+	</body>
+
+</html>
